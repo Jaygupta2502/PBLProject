@@ -1,0 +1,256 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add parallax effect to background images */
+.bg-fixed {
+  background-attachment: fixed;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Sidebar button hover effects */
+.sidebar-button {
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 50%,
+    rgba(79, 70, 229, 0.1) 50%,
+    rgba(79, 70, 229, 0.1) 100%
+  );
+  background-size: 200% 100%;
+  transition: all 0.3s ease;
+}
+
+.sidebar-button:hover {
+  background-position: -100% 0;
+  transform: translateX(8px);
+}
+
+.sidebar-button.active {
+  background: linear-gradient(
+    to right,
+    rgba(79, 70, 229, 0.1) 0%,
+    rgba(99, 102, 241, 0.1) 100%
+  );
+}
+
+/* FullCalendar customizations */
+.fc {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+}
+
+.fc-event {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.fc-event:hover {
+  transform: scale(1.02);
+}
+
+.fc-toolbar-title {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+}
+
+.fc-button-primary {
+  background-color: #4f46e5 !important;
+  border-color: #4338ca !important;
+}
+
+.fc-button-primary:hover {
+  background-color: #4338ca !important;
+  border-color: #3730a3 !important;
+}
+
+.fc-timegrid-slot {
+  height: 3rem !important;
+}
+
+/* Video background styles */
+video {
+  filter: brightness(0.6);
+  transition: filter 0.3s ease;
+}
+
+/* Slick slider custom styles */
+.slick-slider {
+  margin: 0 -15px;
+}
+
+.slick-slide {
+  padding: 0 15px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.slick-slide.slick-active {
+  opacity: 1;
+}
+
+.slick-prev,
+.slick-next {
+  width: 40px;
+  height: 40px;
+  background: #4f46e5;
+  border-radius: 50%;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background: #4338ca;
+  transform: scale(1.1);
+}
+
+.slick-prev {
+  left: -50px;
+}
+
+.slick-next {
+  right: -50px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 24px;
+}
+
+.slick-dots {
+  bottom: -40px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #4f46e5;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #4338ca;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Form input animations */
+.form-input-animate {
+  transition: all 0.3s ease;
+}
+
+.form-input-animate:focus {
+  transform: scale(1.02);
+}
+
+/* Event card hover effects */
+.event-card {
+  transition: all 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Image upload preview animations */
+.image-preview {
+  transition: all 0.3s ease;
+}
+
+.image-preview:hover {
+  transform: scale(1.05);
+}
+
+/* Analytics card animations */
+.analytics-card {
+  transition: all 0.3s ease;
+}
+
+.analytics-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Chart animations */
+.recharts-wrapper {
+  transition: all 0.3s ease;
+}
+
+.rech
+
+arts-wrapper:hover {
+  transform: scale(1.02);
+}
+
+/* Gradient text effects */
+.gradient-text {
+  background: linear-gradient(45deg, #4f46e5, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hover effects for buttons */
+.hover-gradient {
+  background-size: 200% auto;
+  transition: all 0.3s ease;
+}
+
+.hover-gradient:hover {
+  background-position: right center;
+}
+
+/* Card transitions */
+.card-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-transition:hover {
+  transform: translateY(-4px) scale(1.01);
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Pulse animation for notifications */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
